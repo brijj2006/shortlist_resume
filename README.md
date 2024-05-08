@@ -1,65 +1,85 @@
-```
-# Resume Shortlisting Project
+# Resume Shortlisting Model
 
-This project implements a machine learning model to shortlist resumes based on predefined criteria. The model uses a logistic regression classifier trained on resume data to predict whether a resume should be shortlisted or not.
+This project implements a machine learning model for resume shortlisting using text data from resumes. The model is trained using a logistic regression classifier with TF-IDF vectorization for feature extraction.
 
 ## Project Structure
 
-```
-```bash
-resume_shortlisting_project/
-│
-├── data/
-│   └── resume_dataset.csv          # CSV file containing resume data
-│
-├── models/
-│   └── trained_model.pkl           # Trained machine learning model (saved as a pickle file)
-│
-├── src/
-│   ├── __init__.py
-│   ├── shortlisting_model.py       # Python script for training and evaluating the model
-│   └── predict_shortlisting.py     # Python script for using the trained model to predict shortlisting for new resumes
-│
-├── requirements.txt                # File listing project dependencies
-└── README.md                       # Project documentation
+The project directory is structured as follows:
 
-```
+- `data/`: Contains the dataset file `resume_dataset_2.csv`.
+- `models/`: Stores the trained pipeline (`trained_pipeline.pkl`).
+- `src/`: Source code directory.
+  - `data_processing/`: Data loading functionality (`data_loader.py`).
+  - `model_training/`: Model training modules (`model_trainer.py` and `vectorizer.py`).
+  - `prediction/`: Prediction-related modules (`predictor.py` and `predict_shortlisting.py`).
+  - `main.py`: Main script for training the model and saving the pipeline.
+- `scripts/`: Separate scripts for model training and prediction (`train_model_script.py` and `predict_shortlisting_script.py`).
+- `requirements.txt`: File listing the project dependencies.
 
-```
+## Installation
 
-- **data/**: Directory containing the dataset file `resume_dataset.csv` containing resume data.
-- **models/**: Directory storing the trained machine learning model `trained_model.pkl`.
-- **src/**: Source code directory containing scripts for training and using the model.
-- **requirements.txt**: File listing project dependencies.
-- **README.md**: This file providing project documentation.
+1. Clone this repository to your local machine:
+git clone https://github.com/your_username/shortlisting_project.git
+
+css
+Copy code
+
+2. Navigate to the project directory:
+cd shortlisting_project
+
+arduino
+Copy code
+
+3. Create a virtual environment (optional but recommended):
+python -m venv venv
+
+r
+Copy code
+
+4. Activate the virtual environment:
+- On Windows:
+  ```
+  venv\Scripts\activate
+  ```
+- On macOS/Linux:
+  ```
+  source venv/bin/activate
+  ```
+
+5. Install the required dependencies:
+pip install -r requirements.txt
+
+shell
+Copy code
 
 ## Usage
 
-1. Clone the repository:
+### Training the Model
 
-```bash
-git clone https://github.com/yourusername/resume-shortlisting-project.git
-cd resume-shortlisting-project
-```
+To train the model and save the pipeline, run:
+python scripts/train_model_script.py
 
-2. Install dependencies:
+vbnet
+Copy code
 
-```bash
-pip install -r requirements.txt
-```
+### Predicting Shortlisting
 
-3. Train the model:
+After training the model, you can predict shortlisting for new resume text data by running:
+python scripts/predict_shortlisting_script.py
 
-```bash
-python src/shortlisting_model.py
-```
-
-4. Predict shortlisting for new resumes:
-
-```bash
-python src/predict_shortlisting.py
-```
+markdown
+Copy code
 
 ## Dataset
 
-The `resume_dataset.csv` file contains sample resume data for training the model. Each row represents a resume with text content and a label indicating whether the resume was shortlisted or not.
+The dataset used for training the model is `resume_dataset_2.csv` located in the `data/` directory. Ensure that the dataset is appropriately formatted with columns for resume text and shortlisted status.
+
+## Dependencies
+
+The project uses the following Python libraries:
+- pandas
+- scikit-learn
+- joblib
+
+The dependencies are listed in the `requirements.txt` file. You can install them using:
+pip install -r requirements.txt
