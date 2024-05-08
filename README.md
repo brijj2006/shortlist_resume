@@ -19,7 +19,7 @@ The project directory is structured as follows:
 ## Installation
 
 1. Clone this repository to your local machine:
-git clone https://github.com/your_username/shortlisting_project.git
+git clone https://github.com/brijj2006/shortlist_resume.git
 
 css
 Copy code
