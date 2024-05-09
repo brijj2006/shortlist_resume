@@ -19,22 +19,14 @@ The project directory is structured as follows:
 ## Installation
 
 1. Clone this repository to your local machine:
-git clone https://github.com/brijj2006/shortlist_resume.git
+```git clone https://github.com/brijj2006/shortlist_resume.git```
 
-css
-Copy code
 
 2. Navigate to the project directory:
-cd shortlisting_project
-
-arduino
-Copy code
+```cd shortlisting_project```
 
 3. Create a virtual environment (optional but recommended):
-python -m venv venv
-
-r
-Copy code
+```python -m venv venv```
 
 4. Activate the virtual environment:
 - On Windows:
@@ -47,28 +39,19 @@ Copy code
   ```
 
 5. Install the required dependencies:
-pip install -r requirements.txt
-
-shell
-Copy code
+```pip install -r requirements.txt```
 
 ## Usage
 
 ### Training the Model
 
 To train the model and save the pipeline, run:
-python scripts/train_model_script.py
-
-vbnet
-Copy code
+```python scripts/train_model_script.py```
 
 ### Predicting Shortlisting
 
 After training the model, you can predict shortlisting for new resume text data by running:
-python scripts/predict_shortlisting_script.py
-
-markdown
-Copy code
+```python scripts/predict_shortlisting_script.py```
 
 ## Dataset
 
@@ -82,4 +65,4 @@ The project uses the following Python libraries:
 - joblib
 
 The dependencies are listed in the `requirements.txt` file. You can install them using:
-pip install -r requirements.txt
+```pip install -r requirements.txt```
